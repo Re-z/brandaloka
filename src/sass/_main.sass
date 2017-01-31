@@ -1,0 +1,278 @@
+$primary: #E83A93
+$secondary: #777777
+
+$desc: 1200
+$tab: 1024
+$mob: 767
+
++font(HomizioNova,HomizioNova)
++font(HomizioNova-Light,HomizioNova-Light)
+
+body
+	font-family: HomizioNova, sans-serif
+
+
+=flex($vert:space-between, $hor:stretch)
+	display: flex
+	justify-content: $vert
+	align-items: $hor
+	flex-wrap: wrap
+
+
+a
+	text-decoration: none
+	color: inherit
+	&:active
+		transform: scale(.95)
+
+*
+	transition: .5s
+
+.inner
+	width: 1200px
+	margin: 0 auto
+	position: relative
+	padding: 0 10px
+	+r($desc)
+		width: auto
+
+.header
+	height: 950px
+	background: url("../img/header.jpg") center center no-repeat
+	background-size: cover
+	&__box
+		padding-top: 100px
+.rhomb
+	display: block
+	width: 150px
+	height: 150px
+	text-align: center
+	position: relative
+	padding-top: 25px
+	&__inner
+		position: absolute
+		left: 0
+		top: 0
+		width: 150px
+		height: 150px
+		transform: rotate(-45deg)
+		border: 2px solid white
+
+	&__works
+		&:before, &:after
+			display: block
+			content: ''
+			position: absolute
+			height: 2px
+			background: white
+			width: 100px
+			transition: .5s
+		&:before
+			left: -100px
+			bottom: -2px
+		&:after
+			right: -100px
+			top: -2px
+		&:hover
+			border-color: $primary
+			&:before, &:after
+				background: $primary
+	i
+		display: block
+		margin: 0 auto 10px auto
+		+s(monitor)
+	span
+		font-size: 24px
+		color: white
+		display: block
+
+.colored
+	color: $primary
+.content
+	h1,h2,h3,h4
+		font-size: 60px
+		color: $secondary
+		text-align: center
+		margin-bottom: 40px
+	p
+		font-size: 25px
+		color: $secondary
+		margin-bottom: 15px
+		line-height: 1.4
+		&:last-of-type
+			margin-bottom: 0
+
+.block
+	padding:  40px 0
+	text-align: center
+	&_colored
+		background: #EEEEEE
+
+.what
+	margin-top: 100px
+	+flex(space-between)
+	padding-bottom: 50px
+
+	&__item
+		width: 200px
+		height: 200px
+		text-align: center
+		position: relative
+		padding-top: 30px
+		&:before
+			display: block
+			content: ''
+			width: 200px
+			height: 200px
+			border: 4px solid $primary
+			transform: rotate(-45deg)
+			position: absolute
+			left: 0
+			top: 0
+			z-index: -1
+			transition: 1s
+
+		span
+			font-size: 60px
+			color: $primary
+			font-weight: bold
+		p
+			font-size: 30px
+			color: $primary
+		&:hover
+			&:before
+				background: $primary
+				transform: rotate(-315deg)
+			p, span
+				color: white
+
+.about
+	+clr
+	margin-top: 60px
+	&__left
+		float: left
+		width: 49%
+		text-align: left
+
+	&__right
+		float: right
+		width: 49%
+		padding-bottom: 50px
+		position: relative
+		overflow: hidden
+		.slick-dots button
+			width: 20px
+			height: 20px
+			background: $secondary
+			border-radius: 0
+			transform: rotate(-45deg)
+		.slick-dots li.slick-active button
+			background: $primary
+		.slick-dots
+			bottom: -50px
+		.slick-dots li
+			padding: 6px
+		&:hover
+			.about__next, .about__prev
+				opacity: 1
+				left: 10px
+			.about__next
+				left: auto
+				right: 10px
+	&__next, &__prev
+		position: absolute
+		top: 40%
+		width: 40px
+		height: 40px
+		background: $primary
+		transform: rotate(-45deg)
+		z-index: 2
+		left: -50px
+		opacity: 0
+		&:before
+			position: absolute
+			display: block
+			content: ''
+			+s(arr-left)
+			top: 12%
+			left: 26%
+			transform: rotate(45deg)
+	&__next
+		left: auto
+		right: -100px
+		&:before
+			+s(arr-right)
+			left: auto
+			right: 22%
+			top: 31%
+	&__btn
+		display: inline-block
+		margin-top: 80px
+.services
+	+flex(space-between)
+	margin-top: 100px
+	&__item
+		width: 31%
+		+clr
+		margin-bottom: 50px
+		&:hover
+			.services__icon:before
+				border-color: $primary
+				transform: rotate(-315deg) scale(1.1)
+
+
+	&__icon
+		width: 90px
+		height: 90px
+		text-align: center
+		padding-top: 20px
+		float: left
+		margin-right: 40px
+		margin-bottom: 30px
+		position: relative
+		top: 20px
+		i
+			display: block
+			margin: 0 auto
+
+		&:before
+			display: block
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			width: 90px
+			height: 90px
+			transform: rotate(-45deg)
+			border: 2px solid #EEEEEE
+			transition: 1s
+
+
+		&_graph i
+			+s(graph)
+		&_cloud i
+			+s(cloud)
+		&_geo i
+			+s(geo)
+		&_bell i
+			+s(bell)
+		&_eye i
+			+s(eye)
+		&_code i
+			+s(code)
+	&__text-wrap
+		text-align: left
+		h5
+			font-size: 30px
+			margin-bottom: 20px
+			color: $secondary
+			font-weight: normal
+		p
+			font-size: 20px
+
+.btn
+	padding: 20px 40px
+	background: $primary
+	text-align: center
+	font-size: 35px
+	color: white
