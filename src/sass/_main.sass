@@ -18,6 +18,8 @@ body
 	align-items: $hor
 	flex-wrap: wrap
 
+=rotate
+	transform: rotate(-45deg)
 
 a
 	text-decoration: none
@@ -103,10 +105,12 @@ a
 			margin-bottom: 0
 
 .block
-	padding:  40px 0
+	padding:  40px 0 60px 0
 	text-align: center
 	&_colored
 		background: #EEEEEE
+	&_team
+		padding: 100px 0
 
 .what
 	margin-top: 100px
@@ -246,8 +250,6 @@ a
 			transform: rotate(-45deg)
 			border: 2px solid #EEEEEE
 			transition: 1s
-
-
 		&_graph i
 			+s(graph)
 		&_cloud i
@@ -270,9 +272,207 @@ a
 		p
 			font-size: 20px
 
+
+
+.phones
+	height: 1000px
+	background: url("../img/phones.jpg") center center no-repeat
+	background-size: cover
+	padding-top: 150px
+	position: relative
+	& .inner
+		+clr
+	&__img
+		display: block
+		float: left
+		margin-right: 80px
+		max-width: 70%
+	&__item
+		margin-bottom: 40px
+	&__text-wrap
+		text-align: left
+		h5
+			color: white
+			font-size: 40px
+			font-weight: normal
+		p
+			color: white
+	&__icon
+		width: 90px
+		height: 90px
+		text-align: center
+		padding-top: 20px
+		float: left
+		margin-right: 40px
+		margin-bottom: 30px
+		position: relative
+		top: 20px
+		&:before
+			display: block
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			width: 90px
+			height: 90px
+			transform: rotate(-45deg)
+			border: 2px solid white
+			transition: 1s
+		i
+			display: block
+			margin: 0 auto
+			+s(code-white)
+	&__btn
+		display: inline-block
+		margin-left: 130px
+		margin-top: 60px
+	&__clients
+		position: absolute
+		bottom: 0
+		left: 50%
+		margin-left: -600px
+		margin-bottom: -71px
+		width: 1200px
+.clients
+	padding: 20px 0
+	background: white
+
+
+	img
+		margin: 0 auto
+		display: block
+	&__next, &__prev
+		position: absolute
+		top: 30%
+		width: 40px
+		height: 40px
+		background: $primary
+		transform: rotate(-45deg)
+		z-index: 2
+		left: -20px
+		//opacity: 0
+		&:before
+			position: absolute
+			display: block
+			content: ''
+			+s(arr-left)
+			top: 12%
+			left: 26%
+			transform: rotate(45deg)
+	&__next
+		left: auto
+		right: -20px
+		&:before
+			+s(arr-right)
+			left: auto
+			right: 22%
+			top: 31%
+
 .btn
 	padding: 20px 40px
 	background: $primary
 	text-align: center
 	font-size: 35px
 	color: white
+	display: inline-block
+
+.team
+	margin: 50px 0
+	+flex(space-between)
+	&__item
+		text-align: center
+		img
+			display: block
+			margin-bottom: 30px
+		span
+			color: $primary
+			font-size: 30px
+
+
+.posts
+	+flex(space-between)
+	margin: 80px 0 100px 0
+	&__item
+		max-width: 360px
+		border-bottom: 3px solid transparent
+		&:hover
+			border-bottom-color: $primary
+			&>.posts__img-wrap img
+				opacity: .8
+			&>.posts__img-wrap a
+				left: 50%
+				margin-left: -30px
+				+rotate
+	&__img-wrap
+		position: relative
+		overflow: hidden
+		img
+			display: block
+			max-width: 100%
+		a
+			width: 60px
+			height: 60px
+			position: absolute
+			left: -100px
+			top: 70px
+			background: $primary
+			z-index: 1
+			transition: 1s
+			transform: rotate(-360deg)
+			&:after
+				display: block
+				content: ''
+				+s(link)
+				position: absolute
+				left: 16px
+				top: 14px
+				z-index: 1
+				transform: rotate(45deg)
+
+	&__item-inner
+		padding: 20px 15px
+		background: white
+		text-align: left
+
+		h5
+			font-size: 30px
+			color: $secondary
+			margin-bottom: 10px
+			font-weight: 400
+		p
+			font-size: 22px
+			line-height: 1.2
+	&__item-footer
+		margin-top: 30px
+		time, a
+			display: inline-block
+			font-size: 20px
+			color: $secondary
+			vertical-align: middle
+			margin-right: 30px
+			&:before, .posts__item-footer span:before
+				display: inline-block
+				content: ''
+				+s(clock)
+				vertical-align: middle
+				margin-right: 10px
+		a:before
+			+s(buble)
+
+
+.skills
+	margin: 80px 0 100px 0
+	+flex(space-between)
+	&__item
+	&__circle
+		width: 180px
+		height: 180px
+		text-align: center
+		border-radius: 50%
+		border: 7px solid $primary
+		padding-top: 55px
+		margin-bottom: 15px
+	&__increase
+		font-size: 45px
+		//font-weight: bold
+		color: $secondary

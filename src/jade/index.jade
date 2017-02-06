@@ -52,8 +52,7 @@ block content
 				.services
 					mixin serviceItem(className)
 						article.services__item
-							.services__icon(class=className)
-								i
+							.services__icon(class=className): i
 							.services__text-wrap
 								h5 Adipiscing tortor
 								p Morbi condimentum leo sed sollicitudin pulvinar. Phasellus rutrum interdum elit quis.
@@ -64,6 +63,95 @@ block content
 					+serviceItem('services__icon_bell')
 					+serviceItem('services__icon_eye')
 					+serviceItem('services__icon_code')
+		section.phones
+			.inner
+				img.phones__img(src="img/devices.png")
+				.phones__right
+					mixin phonesItem
+						article.phones__item
+							.phones__icon: i
+							.phones__text-wrap
+								h5 Adipiscing tortor
+								p Morbi condimentum leo sed sollicitudin pulvinar. Phasellus rutrum interdum elit quis.
+					+phonesItem
+					+phonesItem
+					+phonesItem
+
+					a.btn.phones__btn(href="#") Learn more
+
+			.clients.phones__clients
+				button.clients__next
+				button.clients__prev
+				.clients__slider.js-clients-slider
+					a(href="#"): img(src="img/client-1.png")
+					a(href="#"): img(src="img/client-2.png")
+					a(href="#"): img(src="img/client-3.png")
+					a(href="#"): img(src="img/client-4.png")
+					a(href="#"): img(src="img/client-1.png")
+					a(href="#"): img(src="img/client-2.png")
+					a(href="#"): img(src="img/client-3.png")
+					a(href="#"): img(src="img/client-4.png")
+
+		section.block.block_team
+			.inner
+				h3 Our #[span.colored team]
+				.team
+					.team__item
+						img(src="img/team-1.png")
+						span CEO/Founder
+					.team__item
+						img(src="img/team-2.png")
+						span Manager
+					.team__item
+						img(src="img/team-3.png")
+						span Web developer
+					.team__item
+						img(src="img/team-4.png")
+						span Web designer
+
+		section.block.block_colored
+			.inner
+				h3 Latest #[span.colored posts]
+				.posts
+					mixin postItem(imgLink)
+						article.posts__item
+							.posts__img-wrap
+								img(src=imgLink)
+								a(href="#")
+							.posts__item-inner
+								h5 Aliquam metus neque
+								p bibendum sit amet porta at, consequat et enim. In ut turpis non ipsum rhoncus porttitor vel ac nunc. Maecenas interdum dignissim lorem quis auctor sit amet nulla nisl, aliquam pretium ipsum.
+								footer.posts__item-footer
+									time September 02
+									a(href="#") 19
+					+postItem("img/post-1.jpg")
+					+postItem("img/post-2.jpg")
+					+postItem("img/post-3.jpg")
+
+				a(href="#").btn More posts
+
+		section.block
+			.inner
+				h3 Our #[span.colored skills]
+				.skills
+					mixin skillsItem(value, category)
+						.skills__item
+							.skills__circle
+								span.skills__increase=value
+							p=category
+					+skillsItem('85%', 'Web Design')
+					+skillsItem('65%', 'Branding Design')
+					+skillsItem('80%', 'Time managment')
+					+skillsItem('65%', 'Creative cloud')
+					+skillsItem('85%', 'Web Development')
+		section.block
+			.inner
+				h3 Our #[span.colored latest] projects
+				.portfolio
+
+
+
+
 
 
 
