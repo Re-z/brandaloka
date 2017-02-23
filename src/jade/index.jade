@@ -145,15 +145,49 @@ block content
 					+skillsItem('65%', 'Creative cloud')
 					+skillsItem('85%', 'Web Development')
 		section.block
+			h3 Our #[span.colored latest] projects
+			.projects
+				mixin projItem(img)
+					.projects__item
+						a.projects__overlay(href="#")
+							span Project Name
+						img(src="img/#{img}")
+				+projItem('project-1.jpg')
+				+projItem('project-2.jpg')
+				+projItem('project-3.jpg')
+				+projItem('project-4.jpg')
+				+projItem('project-5.jpg')
+				+projItem('project-6.jpg')
+				+projItem('project-6.jpg')
+				+projItem('project-5.jpg')
+				+projItem('project-7.jpg')
+				+projItem('project-3.jpg')
+				+projItem('project-2.jpg')
+				+projItem('project-1.jpg')
+
+		section.block.block_colored
 			.inner
-				h3 Our #[span.colored latest] projects
-				.portfolio
-
-
-
-
-
-
+				h3 Special #[span.colored offers]
+				.offers
+					.offers__item
+						h4 Standart
+						b $39.99
+						mixin offersContent
+							p Duis mi dolor, fermentum
+							p scelerisque mattis sit amet,
+							p condimentum sit amet nunc.
+							p Cras eros felis
+							p tristique sed sagittis id
+							a(href="#").offers__btn take a plan
+						+offersContent
+					.offers__item
+						h4 The best
+						b $59.99
+						+offersContent
+					.offers__item
+						h4 Premium
+						b $89.99
+						+offersContent
 
 
 
