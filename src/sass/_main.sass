@@ -39,12 +39,14 @@ a
 		width: auto
 
 .header
-	height: 950px
+	height: 840px
 	background: url("../img/header.jpg") center center no-repeat
 	background-size: cover
+	.inner
+		width: 900px
 	&__box
 		padding-top: 170px
-	&__left
+	&__content-wrap
 		position: relative
 
 .rhomb
@@ -73,7 +75,8 @@ a
 			border-color: $primary
 			&:before, &:after
 				background: $primary
-	&__works
+
+	&_works
 		top: 0
 		left: 0
 		& .rhomb__inner
@@ -85,10 +88,10 @@ a
 				right: -100px
 				top: -2px
 				width: 200px
-	&__what
+	&_what
 		top: 0
 		left: 210px
-	&__team
+	&_team
 		top: 320px
 		left: 100px
 		& .rhomb__inner
@@ -97,7 +100,7 @@ a
 				bottom: -12px
 				width: 100px
 				transform: rotate(90deg)
-	&__about
+	&_about
 		top: 320px
 		left: 320px
 		& .rhomb__inner
@@ -106,6 +109,19 @@ a
 				bottom: -2px
 				width: 100px
 				//transform: rotate(90deg)
+	&_get
+		top: 100px
+		left: 532px
+		& .rhomb__inner
+			&:before
+				right: 147px
+				bottom: -2px
+				width: 145px
+			&:after
+				left: 74px
+				top: -72px
+				width: 145px
+				transform: rotate(-90deg)
 	i
 		display: block
 		margin: 0 auto 10px auto
@@ -117,10 +133,50 @@ a
 		+s(USERS)
 	&__about-ico
 		+s(heart)
+	&__get-ico
+		+s(envelope)
+	&__fb-ico
+		+s(facebook)
+	&__tw-ico
+		+s(twitter)
+	&__dr-ico
+		+s(dribble)
+	&__goo-ico
+		+s(google-plus)
+	&__skype-ico
+		+s(skype)
+	&__vim-ico
+		+s(vimeo)
 	span
 		font-size: 24px
 		color: white
 		display: block
+	&_small
+		width: 50px
+		height: 50px
+		padding-top: 10px
+		& .rhomb__inner
+			width: 50px
+			height: 50px
+	&_fb
+		top: -30px
+		left: 580px
+	&_tw
+		top: -30px
+		left: 650px
+	&_dr
+		top: -30px
+		left: 720px
+	&_goo
+		top: 20px
+		left: 615px
+	&_skype
+		top: 40px
+		left: 720px
+	&_vim
+		top: 80px
+		left: 680px
+
 .rhomb-1
 	background: url("../img/header-1.jpg") center center no-repeat
 	left: 210px
@@ -149,8 +205,26 @@ a
 	background: url("../img/header-2.jpg") right bottom no-repeat
 	+rotate
 	border: 2px solid white
-	//background-size: cover
-
+	&:before
+		display: block
+		content: ''
+		width: 200px
+		background: white
+		height: 2px
+		left: -101px
+		bottom: -102px
+		position: absolute
+		transform: rotate(90deg)
+	&:after
+		display: block
+		content: ''
+		width: 200px
+		background: white
+		height: 2px
+		right: -202px
+		top: -2px
+		position: absolute
+		//transform: rotate(90deg)
 .logo
 	position: absolute
 	left: 40px
