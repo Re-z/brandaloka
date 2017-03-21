@@ -188,7 +188,30 @@ block content
 						h4 Premium
 						b $89.99
 						+offersContent
+		section.subscribe.block
+			.inner
+				h2 Subscribe #[span.colored our] newsletter
+				p Sed ut perspiciatis unde omnis iste natus error sit #[span.colored voluptatem accusantium.]
+				form
+					input(type="email" placeholder="enter your email address")
+					input.btn(type="submit" value="Subscribe now")
+		section.block
+			.inner
+				h2	Get in #[span.colored touch]
+				p Sed ut perspiciatis unde omnis iste natus error sit #[span.colored voluptatem accusantium.]
 
+				form.feed
+					.feed__box
+						.feed__left
+							.feed__input-wrap
+								input(type="text" placeholder="Name")
+							.feed__input-wrap
+								input(type="email" placeholder="Email")
+							.feed__input-wrap
+								input(type="text" placeholder="Subject")
+						.feed__right
+							textarea
+					input(type="submit" value="Submit").btn
 
 
 	include _footer

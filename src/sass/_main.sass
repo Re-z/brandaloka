@@ -43,13 +43,16 @@ a
 	background: url("../img/header.jpg") center center no-repeat
 	background-size: cover
 	&__box
-		padding-top: 100px
+		padding-top: 170px
+	&__left
+		position: relative
+
 .rhomb
 	display: block
 	width: 150px
 	height: 150px
 	text-align: center
-	position: relative
+	position: absolute
 	padding-top: 25px
 	&__inner
 		position: absolute
@@ -59,34 +62,103 @@ a
 		height: 150px
 		transform: rotate(-45deg)
 		border: 2px solid white
-
-	&__works
 		&:before, &:after
 			display: block
 			content: ''
 			position: absolute
 			height: 2px
 			background: white
-			width: 100px
 			transition: .5s
-		&:before
-			left: -100px
-			bottom: -2px
-		&:after
-			right: -100px
-			top: -2px
 		&:hover
 			border-color: $primary
 			&:before, &:after
 				background: $primary
+	&__works
+		top: 0
+		left: 0
+		& .rhomb__inner
+			&:before
+				left: -100px
+				bottom: -2px
+				width: 100px
+			&:after
+				right: -100px
+				top: -2px
+				width: 200px
+	&__what
+		top: 0
+		left: 210px
+	&__team
+		top: 320px
+		left: 100px
+		& .rhomb__inner
+			&:before
+				right: 97px
+				bottom: -12px
+				width: 100px
+				transform: rotate(90deg)
+	&__about
+		top: 320px
+		left: 320px
+		& .rhomb__inner
+			&:before
+				right: 147px
+				bottom: -2px
+				width: 100px
+				//transform: rotate(90deg)
 	i
 		display: block
 		margin: 0 auto 10px auto
+	&__works-ico
 		+s(monitor)
+	&__what-ico
+		+s(book)
+	&__team-ico
+		+s(USERS)
+	&__about-ico
+		+s(heart)
 	span
 		font-size: 24px
 		color: white
 		display: block
+.rhomb-1
+	background: url("../img/header-1.jpg") center center no-repeat
+	left: 210px
+	top: 210px
+	+rotate
+	border: 2px solid white
+	&:before
+		display: block
+		content: ''
+		width: 100px
+		background: white
+		height: 2px
+		right: -102px
+		bottom: -2px
+		position: absolute
+.rhomb-3
+	top: 320px
+	left: 532px
+	background: url("../img/header-3.jpg") right bottom no-repeat
+	+rotate
+	border: 2px solid white
+	background-size: cover
+.rhomb-2
+	top: 210px
+	left: 642px
+	background: url("../img/header-2.jpg") right bottom no-repeat
+	+rotate
+	border: 2px solid white
+	//background-size: cover
+
+.logo
+	position: absolute
+	left: 40px
+	top: 140px
+	background: url("../img/logo.png") center center no-repeat
+	width: 180px
+	height: 164px
+	background-size: cover
 
 .colored
 	color: $primary
@@ -556,3 +628,102 @@ a
 		font-size: 25px
 		background: $secondary
 		color: white
+
+.subscribe
+	height: 600px //
+	background: url('../img/subscribe.jpg') center center
+	background-size: cover
+	h2,p
+		color: white
+	form
+		margin-top: 80px
+		input[type="email"]
+			width: 800px
+			display: block
+			margin: 0 auto 70px auto
+			height: 80px
+			line-height: 80px
+			color: white
+			font-size: 25px
+			background: rgba(lightgray, 0.5)
+			padding: 0 30px
+			&::placeholder
+				text-align: center
+				color: white
+				font-style: italic
+
+=star($top)
+	&:after
+		display: block
+		content: '*'
+		color: $primary
+		position: absolute
+		right: 20px
+		top: $top
+		font-size: 25px
+.feed
+	margin-top: 80px
+	&__box
+		+flex
+		margin-bottom: 80px
+	&__left
+		width: 49%
+	&__right
+		width: 49%
+		position: relative
+		+star(20px)
+		textarea
+			display: block
+			width: 100%
+			height: 100%
+			resize: none
+			background: #eeeeee
+			border: none
+			padding: 20px 30px 20px 20px
+			font-size: 30px
+			color: $secondary
+	&__input-wrap
+		margin-bottom: 25px
+		position: relative
+		+star(10px)
+		&:last-of-type
+			margin-bottom: 0
+			&:after
+				display: none
+	input[type="text"], input[type="email"]
+		display: block
+		width: 100%
+		height: 50px
+		line-height: 50px
+		background: #EEEEEE
+		font-size: 25px
+		padding: 20px 30px 20px 20px
+		color: $secondary
+
+
+
+.footer
+	padding: 100px 0 60px 0
+	ul
+		text-align: center
+		margin-bottom: 60px
+	li
+		display: inline-block
+		margin-right: 40px
+		&:last-of-type
+			margin-right: 0
+	&__fb
+		display: block
+		+s(fb)
+	&__tw
+		display: block
+		+s(tw)
+	&__dr
+		display: block
+		+s(dr)
+	p
+		font-size: 25px
+		color: $secondary
+		margin-bottom: 15px
+		line-height: 1.4
+		text-align: center
