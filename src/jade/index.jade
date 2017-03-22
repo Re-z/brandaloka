@@ -123,12 +123,12 @@ block content
 								p bibendum sit amet porta at, consequat et enim. In ut turpis non ipsum rhoncus porttitor vel ac nunc. Maecenas interdum dignissim lorem quis auctor sit amet nulla nisl, aliquam pretium ipsum.
 								footer.posts__item-footer
 									time September 02
-									a(href="#") 19
+									span 19
 					+postItem("img/post-1.jpg")
 					+postItem("img/post-2.jpg")
 					+postItem("img/post-3.jpg")
 
-				a(href="#").btn More posts
+				button.btn.more-posts More posts
 
 		section.block
 			.inner
@@ -194,7 +194,7 @@ block content
 				p Sed ut perspiciatis unde omnis iste natus error sit #[span.colored voluptatem accusantium.]
 				form
 					input(type="email" placeholder="enter your email address")
-					input.btn(type="submit" value="Subscribe now")
+					button.btn(type="submit" ) Subscribe now
 		section.block
 			.inner
 				h2	Get in #[span.colored touch]
@@ -211,7 +211,7 @@ block content
 								input(type="text" placeholder="Subject")
 						.feed__right
 							textarea
-					input(type="submit" value="Submit").btn
+					button(type="submit").btn Submit
 
 
 	include _footer

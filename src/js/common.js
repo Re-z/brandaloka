@@ -40,4 +40,36 @@ $(document).ready(function() {
     //    thousandSeparator: "", // Разделитель тыcячных
     //    duration: 3000          // Продолжительность анимации в миллисекундах
     //});
+
+    let loadPosts = () => {
+        let trigger = document.querySelector('.more-posts');
+        trigger.addEventListener('click', () => {
+           let xhr = new XMLHttpRequest();
+            xhr.open('GET','../posts.json');
+            xhr.addEventListener('load', () => {
+                let response = JSON.parse(xhr.responseText);
+                let article = document.querySelector('.posts__item');
+                let posts = document.querySelector('.posts');
+
+                for(let i = 0; i<response.length; i++) {
+                    let newArticle = article.cloneNode(true);
+
+                    //changing properties according to json
+                    newArticle.querySelector('img').src = response[i].img;
+                    newArticle.querySelector('a').href = response[i].href;
+                    newArticle.querySelector('h5').innerHTML = response[i].title;
+                    newArticle.querySelector('p').innerHTML = response[i].text;
+                    newArticle.querySelector('time').innerHTML = response[i].time;
+                    newArticle.querySelector('span').innerHTML = response[i].comments;
+
+                    //add new posts
+                    posts.appendChild(newArticle);
+                }
+        //alert(newArticleImg)
+
+            })
+            xhr.send();
+        })
+    }
+    loadPosts()
 });
