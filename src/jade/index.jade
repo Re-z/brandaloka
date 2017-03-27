@@ -135,7 +135,7 @@ block content
 				h3 Our #[span.colored skills]
 				.skills
 					mixin skillsItem(value, category)
-						.skills__item
+						.skills__item.is-hidden
 							.skills__circle
 								span.skills__increase=value
 							p=category
@@ -144,6 +144,7 @@ block content
 					+skillsItem('80%', 'Time managment')
 					+skillsItem('65%', 'Creative cloud')
 					+skillsItem('85%', 'Web Development')
+
 		section.block
 			h3 Our #[span.colored latest] projects
 			.projects

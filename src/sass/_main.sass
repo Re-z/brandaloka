@@ -10,6 +10,9 @@ $mob: 767
 
 body
 	font-family: HomizioNova, sans-serif
+	&.no-scroll
+		overflow: hidden
+
 
 
 =flex($vert:space-between, $hor:stretch)
@@ -677,6 +680,10 @@ a
 	margin: 80px 0 100px 0
 	+flex(space-between)
 	&__item
+		transform: scale(1)
+		&.is-hidden
+			transform: scale(0)
+			opacity: 0
 	&__circle
 		width: 180px
 		height: 180px

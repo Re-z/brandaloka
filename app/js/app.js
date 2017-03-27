@@ -56,14 +56,6 @@ $(document).ready(function() {
         $('.header__nav').toggleClass('is-visible');
     });
 
-    //$(".skills__increase").spincrement({
-    //    from: 1,                // Стартовое число
-    //    to: false,              // Итоговое число. Если false, то число будет браться из элемента с классом spincrement, также сюда можно напрямую прописать число. При этом оно может быть, как целым, так и с плавающей запятой
-    //    decimalPlaces: 0,       // Сколько знаков оставлять после запятой
-    //    decimalPoint: "",      // Разделитель десятичной части числа
-    //    thousandSeparator: "", // Разделитель тыcячных
-    //    duration: 3000          // Продолжительность анимации в миллисекундах
-    //});
 
     let loadPosts = () => {
         let trigger = document.querySelector('.more-posts');
@@ -89,11 +81,40 @@ $(document).ready(function() {
                     //add new posts
                     posts.appendChild(newArticle);
                 }
-        //alert(newArticleImg)
-
             })
             xhr.send();
         })
     }
-    loadPosts()
+    loadPosts();
+
+
+    //show skills
+    let showSkillsOnScroll = () => {
+        window.addEventListener('scroll', function scroll(ev) {
+            if(window.pageYOffset > 5300) {
+            document.body.classList.add('no-scroll');
+            window.addEventListener('wheel', function showSkillsOnWheel(ev) {
+                let item = document.querySelector('.skills__item.is-hidden');
+                var currCount = +ev.wheelDelta;
+
+                var count;
+                count +=currCount
+                alert(count)
+
+
+                if(item) {
+                    item.classList.remove('is-hidden')
+                    }
+                else {
+                    window.removeEventListener('scroll', scroll);
+                    document.body.classList.remove('no-scroll');
+
+                }
+
+                })
+        }
+        })
+    }
+    showSkillsOnScroll();
+
 });

@@ -71,6 +71,7 @@ body { font-family: "Open Sans", sans-serif; font-size: 12px; }
 @font-face { font-family: HomizioNova; src: url("fonts/HomizioNova.eot"); src: url("fonts/HomizioNova.eot?#iefix") format("embedded-opentype"), url("fonts/HomizioNova.woff2") format("woff2"), url("fonts/HomizioNova.woff") format("woff"), url("fonts/HomizioNova.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: HomizioNova-Light; src: url("fonts/HomizioNova-Light.eot"); src: url("fonts/HomizioNova-Light.eot?#iefix") format("embedded-opentype"), url("fonts/HomizioNova-Light.woff2") format("woff2"), url("fonts/HomizioNova-Light.woff") format("woff"), url("fonts/HomizioNova-Light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 body { font-family: HomizioNova, sans-serif; }
+body.no-scroll { overflow: hidden; }
 
 a { text-decoration: none; color: inherit; }
 
@@ -241,6 +242,8 @@ a { text-decoration: none; color: inherit; }
 .posts__item-footer span:before { background-image: url("../img/icons.png"); width: 32px; height: 29px; background-position: -235px -189px; }
 
 .skills { margin: 80px 0 100px 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: stretch; -webkit-align-items: stretch; -ms-flex-align: stretch; align-items: stretch; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+.skills__item { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
+.skills__item.is-hidden { -webkit-transform: scale(0); -ms-transform: scale(0); transform: scale(0); opacity: 0; }
 .skills__circle { width: 180px; height: 180px; text-align: center; border-radius: 50%; border: 7px solid #E83A93; padding-top: 55px; margin-bottom: 15px; }
 .skills__increase { font-size: 45px; color: #777777; }
 
