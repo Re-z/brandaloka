@@ -10,8 +10,10 @@ $mob: 767
 
 body
 	font-family: HomizioNova, sans-serif
+	min-width: 320px !important
 	&.no-scroll
 		overflow: hidden
+
 
 
 
@@ -286,17 +288,30 @@ a
 		color: $secondary
 		text-align: center
 		margin-bottom: 40px
+		+r($tab)
+			font-size: 50px
+		+r($mob)
+			font-size: 35px
+			margin-bottom: 25px
 	p
 		font-size: 25px
 		color: $secondary
 		margin-bottom: 15px
 		line-height: 1.4
+		+r($tab)
+			font-size: 22px
+		+r($mob)
+			font-size: 18px
 		&:last-of-type
 			margin-bottom: 0
 
 .block
 	padding:  40px 0 60px 0
 	text-align: center
+	+r($tab)
+		padding: 35px 0 50px 0
+	+r($mob)
+		padding: 30px 0 45px 0
 	&_colored
 		background: #EEEEEE
 	&_team
@@ -305,19 +320,36 @@ a
 .what
 	margin-top: 100px
 	+flex(space-between)
-	padding-bottom: 50px
-
+	//padding-bottom: 50px
+	padding: 0 30px 50px 30px
+	+r($desc)
+		justify-content: space-around
+	+r($mob)
+		margin-top: 70px
 	&__item
-		width: 200px
-		height: 200px
+		width: 180px
+		height: 180px
 		text-align: center
 		position: relative
-		padding-top: 30px
+		padding-top: 20px
+		+r($desc)
+			margin: 0 40px 70px 40px
+			&:last-of-type
+				margin-bottom: 0
+		+r($tab)
+			width: 150px
+			height: 150px
+			margin: 0 40px 60px 40px
+		+r($mob)
+			width: 130px
+			height: 130px
+			padding-top: 15px
+
 		&:before
 			display: block
 			content: ''
-			width: 200px
-			height: 200px
+			width: 180px
+			height: 180px
 			border: 4px solid $primary
 			transform: rotate(-45deg)
 			position: absolute
@@ -325,11 +357,20 @@ a
 			top: 0
 			z-index: -1
 			transition: 1s
+			+r($tab)
+				width: 150px
+				height: 150px
+			+r($mob)
+				width: 130px
+				height: 130px
+
 
 		span
 			font-size: 60px
 			color: $primary
 			font-weight: bold
+			+r($tab)
+				font-size: 50px
 		p
 			font-size: 30px
 			color: $primary
@@ -343,10 +384,17 @@ a
 .about
 	+clr
 	margin-top: 60px
+	+r($mob)
+		margin-top: 30px
 	&__left
 		float: left
 		width: 49%
 		text-align: left
+		+r($mob)
+			float: none
+			width: 100%
+			text-align: center
+			margin-top: 30px
 
 	&__right
 		float: right
@@ -354,6 +402,9 @@ a
 		padding-bottom: 50px
 		position: relative
 		overflow: hidden
+		+r($mob)
+			width: 100%
+			float: none
 		.slick-dots button
 			width: 20px
 			height: 20px
@@ -383,6 +434,8 @@ a
 		z-index: 2
 		left: -50px
 		opacity: 0
+		+r($mob)
+			display: none
 		&:before
 			position: absolute
 			display: block
@@ -402,13 +455,24 @@ a
 	&__btn
 		display: inline-block
 		margin-top: 80px
+		+r($mob)
+			margin-top: 50px
 .services
 	+flex(space-between)
 	margin-top: 100px
+	+r($tab)
+		margin-top: 70px
+	+r($mob)
+		margin-top: 50px
 	&__item
 		width: 31%
 		+clr
 		margin-bottom: 50px
+		+r($desc)
+			width: 48%
+			margin: 0 0 40px 10px
+		+r($mob)
+			width: 100%
 		&:hover
 			.services__icon:before
 				border-color: $primary
@@ -422,7 +486,7 @@ a
 		padding-top: 20px
 		float: left
 		margin-right: 40px
-		margin-bottom: 30px
+		margin-bottom: 50px
 		position: relative
 		top: 20px
 		i
@@ -459,6 +523,7 @@ a
 			margin-bottom: 20px
 			color: $secondary
 			font-weight: normal
+
 		p
 			font-size: 20px
 
@@ -470,21 +535,32 @@ a
 	background-size: cover
 	padding-top: 150px
 	position: relative
+	+r($desc)
+		height: auto
+		padding-top: 50px
+
 	& .inner
 		+clr
 	&__img
 		display: block
 		float: left
 		margin-right: 80px
-		max-width: 70%
+		+r($desc)
+			display: none
 	&__item
 		margin-bottom: 40px
 	&__text-wrap
 		text-align: left
+		+r($desc)
+			text-align: center
 		h5
 			color: white
 			font-size: 40px
 			font-weight: normal
+			+r($tab)
+				font-size: 30px
+			+r($mob)
+				font-size: 25px
 		p
 			color: white
 	&__icon
@@ -497,6 +573,12 @@ a
 		margin-bottom: 30px
 		position: relative
 		top: 20px
+		+r($desc)
+			display: inline-block
+			margin: 0 0 40px 0
+			float: none
+		+r($tab)
+			display: none
 		&:before
 			display: block
 			content: ''
@@ -508,6 +590,7 @@ a
 			transform: rotate(-45deg)
 			border: 2px solid white
 			transition: 1s
+
 		i
 			display: block
 			margin: 0 auto
@@ -516,6 +599,14 @@ a
 		display: inline-block
 		margin-left: 130px
 		margin-top: 60px
+		+r($desc)
+			margin: 60px 0
+		+r($mob)
+			margin-top: 30px
+
+	&__right
+		+r($desc)
+			text-align: center
 	&__clients
 		position: absolute
 		bottom: 0
@@ -523,6 +614,14 @@ a
 		margin-left: -600px
 		margin-bottom: -71px
 		width: 1200px
+		+r($desc)
+			overflow: hidden
+			position: relative
+			left: 0
+			margin-left: 0
+			margin-bottom: 0
+			width: 100%
+
 .clients
 	padding: 20px 0
 	background: white
@@ -531,6 +630,7 @@ a
 	img
 		margin: 0 auto
 		display: block
+		max-width: 60%
 	&__next, &__prev
 		position: absolute
 		top: 30%
@@ -541,6 +641,8 @@ a
 		z-index: 2
 		left: -20px
 		//opacity: 0
+		//+r($tab)
+		//	display: none
 		&:before
 			position: absolute
 			display: block
@@ -568,6 +670,12 @@ a
 	position: relative
 	transition: 1s
 	transform: perspective(1px) translateZ(0)
+	+r($tab)
+		padding: 18px 35px
+		font-size: 30px
+	+r($mob)
+		padding: 15px 25px
+		font-size: 25px
 	&:before
 		transition: 1s
 		content: ""
@@ -593,19 +701,42 @@ a
 .team
 	margin: 80px 0
 	+flex(space-between)
+	+r($desc)
+		justify-content: space-around
+
+	+r($tab)
+		margin: 70px 0
+	+r($mob)
+		margin: 30px 0
 	&__item
 		text-align: center
+		+r($desc)
+			margin-bottom: 20px
 		img
 			display: block
 			margin-bottom: 30px
+			+r($mob)
+				max-width: 65%
+				margin: 0 auto 20px auto
 		span
 			color: $primary
 			font-size: 30px
+			+r($tab)
+				font-size: 25px
+			+r($mob)
+				font-size: 22px
 
 
 .posts
 	+flex(space-between)
 	margin: 80px 0 100px 0
+	+r($desc)
+		justify-content: space-around
+	+r($tab)
+		margin: 60px 0 80px 0
+	+r($mob)
+		margin: 50px 0 30px 0
+
 	&__item
 		max-width: 360px
 		border-bottom: 3px solid transparent
@@ -634,6 +765,9 @@ a
 			z-index: 1
 			transition: 1s
 			transform: rotate(-360deg)
+			+r($mob)
+				left: 50%
+				transform: translateX(-50%) rotate(-45deg)
 			&:after
 				display: block
 				content: ''
@@ -654,12 +788,16 @@ a
 			color: $secondary
 			margin-bottom: 10px
 			font-weight: 400
+			+r($mob)
+				font-size: 25px
 		p
 			font-size: 22px
 			min-height: 130px
 			line-height: 1.2
 	&__item-footer
 		margin-top: 30px
+		+r($mob)
+			margin-top: 10px
 		time, span
 			display: inline-block
 			font-size: 20px
@@ -672,18 +810,30 @@ a
 				+s(clock)
 				vertical-align: middle
 				margin-right: 10px
-		span:before
-			+s(buble)
-
+		span
+			margin-right: 0
+			&:before
+				+s(buble)
 
 .skills
 	margin: 80px 0 100px 0
 	+flex(space-between)
+	+r($tab)
+		margin: 70px 0
+		justify-content: space-around
+
+	+r($mob)
+		margin: 50px 0 0 0
 	&__item
 		transform: scale(1)
+		+r($mob)
+			margin: 10px
 		&.is-hidden
 			transform: scale(0)
 			opacity: 0
+		&:nth-of-type(odd)
+			& .skills__circle
+				border-color: $secondary
 	&__circle
 		width: 180px
 		height: 180px
@@ -692,18 +842,42 @@ a
 		border: 7px solid $primary
 		padding-top: 55px
 		margin-bottom: 15px
+		&:nth-of-type(even)
+			border-color: $secondary
+		+r($tab)
+			width: 150px
+			height: 150px
+			padding-top: 40px
+			margin: 0 auto
+		+r($mob)
+			width: 100px
+			height: 100px
+			padding-top: 25px
 	&__increase
 		font-size: 45px
 		//font-weight: bold
-		color: $secondary
+		color: $primary
+		+r($tab)
+			//font-size: 35px
+			display: block
+		+r($mob)
+			font-size: 30px
 
 .projects
 	+flex(space-between)
 	margin: 80px 0
+	+r($tab)
+		margin: 70px 0
+	+r($mob)
+		margin: 50px 0 0 0
 	&__item
 		overflow: hidden
 		position: relative
 		width: calc(100%/6)
+		+r($tab)
+			width: calc(100%/4)
+		+r($tab)
+			width: calc(100%/3)
 		&:hover
 			.projects__overlay
 				transform: scale(1) rotate(0deg)
@@ -728,6 +902,10 @@ a
 			left: 50%
 			top: 50%
 			transform: translate(-50%, -50%)
+			+r($tab)
+				font-size: 25px
+			+r($mob)
+				font-size: 20px
 
 	img
 		max-width: 100%
@@ -738,12 +916,26 @@ a
 .offers
 	+flex(space-between)
 	margin: 80px 0
+	+r($tab)
+		margin: 70px 0
+	+r($mob)
+		margin: 50px 0
 	&__item
 		width: 31%
 		background: white
 		padding: 30px 25px 100px 25px
 		color: $secondary
 		position: relative
+		+r($tab)
+			padding: 25px 20px 90px 20px
+		+r($mob)
+			width: 100%
+			margin-top: 45px
+			padding: 15px 15px 60px 15px
+		&:first-of-type
+			+r($mob)
+				margin-top: 0
+
 		&:hover, &.is-active
 			h4, b
 				color: $primary
@@ -758,6 +950,12 @@ a
 			font-size: 50px
 			display: block
 			margin: 40px 0
+			+r($tab)
+				font-size: 45px
+				margin: 45px 0
+			+r($mob)
+				font-size: 35px
+				margin: 25px 0
 		p
 			font-size: 20px
 			border-bottom: 1px solid rgba($secondary, .4)
@@ -781,10 +979,18 @@ a
 	height: 600px //
 	background: url('../img/subscribe.jpg') center center
 	background-size: cover
+	+r($tab)
+		height: 500px
+	+r($mob)
+		height: auto
 	h2,p
 		color: white
 	form
 		margin-top: 80px
+		+r($tab)
+			margin-top: 70px
+		+r($mob)
+			margin-top: 50px
 		input[type="email"]
 			width: 800px
 			display: block
@@ -795,6 +1001,17 @@ a
 			font-size: 25px
 			background: rgba(lightgray, 0.5)
 			padding: 0 30px
+			+r($tab)
+				width: 90%
+				height: 70px
+				line-height: 70px
+				font-size: 22px
+			+r($mob)
+				font-size: 18px
+				width: 100%
+				height: 60px
+				line-height: 60px
+				padding: 0 20px
 			&::placeholder
 				text-align: center
 				color: white
@@ -811,15 +1028,28 @@ a
 		font-size: 25px
 .feed
 	margin-top: 80px
+	+r($tab)
+		margin-top: 70px
+	+r($mob)
+		margin-top: 50px
 	&__box
 		+flex
 		margin-bottom: 80px
+		+r($tab)
+			margin-bottom: 70px
+		+r($mob)
+			margin-bottom: 50px
 	&__left
 		width: 49%
+		+r($mob)
+			width: 100%
+			margin-bottom: 20px
 	&__right
 		width: 49%
 		position: relative
 		+star(20px)
+		+r($mob)
+			width: 100%
 		textarea
 			display: block
 			width: 100%
@@ -830,10 +1060,17 @@ a
 			padding: 20px 30px 20px 20px
 			font-size: 30px
 			color: $secondary
+			+r($tab)
+				font-size: 22px
+			+r($mob)
+				min-height: 100px
+				font-size: 18px
 	&__input-wrap
 		margin-bottom: 25px
 		position: relative
 		+star(10px)
+		+r($mob)
+			margin-bottom: 20px
 		&:last-of-type
 			margin-bottom: 0
 			&:after
@@ -847,11 +1084,19 @@ a
 		font-size: 25px
 		padding: 20px 30px 20px 20px
 		color: $secondary
-
-
+		+r($tab)
+			font-size: 22px
+			height: 40px
+			line-height: 40px
+		+r($mob)
+			font-size: 18px
+			height: 30px
+			line-height: 30px
 
 .footer
 	padding: 100px 0 60px 0
+	+r($mob)
+		padding: 50px 0 20px 0
 	ul
 		text-align: center
 		margin-bottom: 60px
@@ -871,6 +1116,10 @@ a
 		+s(dr)
 	p
 		font-size: 25px
+		+r($tab)
+			font-size: 22px
+		+r($mob)
+			font-size: 18px
 		color: $secondary
 		margin-bottom: 15px
 		line-height: 1.4

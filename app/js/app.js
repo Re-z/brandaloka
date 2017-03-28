@@ -41,6 +41,19 @@ $(document).ready(function() {
         arrows: false,
         autoplay: true,
         slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 1023,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                },
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }]
     });
     $('.clients__next').click(function () {
         $('.js-clients-slider').slick('slickNext')
@@ -95,11 +108,11 @@ $(document).ready(function() {
             document.body.classList.add('no-scroll');
             window.addEventListener('wheel', function showSkillsOnWheel(ev) {
                 let item = document.querySelector('.skills__item.is-hidden');
-                var currCount = +ev.wheelDelta;
-
-                var count;
-                count +=currCount
-                alert(count)
+                //var currCount = +ev.wheelDelta;
+                //
+                //var count;
+                //count +=currCount
+                //alert(count)
 
 
                 if(item) {
