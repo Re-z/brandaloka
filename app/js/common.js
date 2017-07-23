@@ -40,10 +40,7 @@ $(document).ready(function() {
 
 
 
-    //mobile burger
-    $('.header__burger').click(function () {
-        $('.header__nav').toggleClass('is-visible');
-    });
+
 
 
     let loadPosts = () => {
@@ -76,34 +73,47 @@ $(document).ready(function() {
     }
     loadPosts();
 
-
-    //show skills
-    let showSkillsOnScroll = () => {
-        window.addEventListener('scroll', function scroll(ev) {
-            if(window.pageYOffset > 5300) {
-            document.body.classList.add('no-scroll');
-            window.addEventListener('wheel', function showSkillsOnWheel(ev) {
-                let item = document.querySelector('.skills__item.is-hidden');
-                //var currCount = +ev.wheelDelta;
-                //
-                //var count;
-                //count +=currCount
-                //alert(count)
+    //mobile burger
+    let burger = document.querySelector('.header__burger');
+    let menu = document.querySelector('.mob-menu');
+    let close = document.querySelector('.mob-menu__close');
+    burger.addEventListener('click', () => {
+        menu.classList.add('is-active');
+    });
+    close.addEventListener('click', () => {
+        menu.classList.remove('is-active');
+    });
 
 
-                if(item) {
-                    item.classList.remove('is-hidden')
-                    }
-                else {
-                    window.removeEventListener('scroll', scroll);
-                    document.body.classList.remove('no-scroll');
 
-                }
 
-                })
-        }
-        })
-    }
-    showSkillsOnScroll();
+    ////show skills
+    //let showSkillsOnScroll = () => {
+    //    window.addEventListener('scroll', function scroll(ev) {
+    //        if(window.pageYOffset > 5300) {
+    //        document.body.classList.add('no-scroll');
+    //        window.addEventListener('wheel', function showSkillsOnWheel(ev) {
+    //            let item = document.querySelector('.skills__item.is-hidden');
+    //            //var currCount = +ev.wheelDelta;
+    //            //
+    //            //var count;
+    //            //count +=currCount
+    //            //alert(count)
+    //
+    //
+    //            if(item) {
+    //                item.classList.remove('is-hidden')
+    //                }
+    //            else {
+    //                window.removeEventListener('scroll', scroll);
+    //                document.body.classList.remove('no-scroll');
+    //
+    //            }
+    //
+    //            })
+    //    }
+    //    })
+    //}
+    //showSkillsOnScroll();
 
 });
