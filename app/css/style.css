@@ -218,7 +218,6 @@ a { text-decoration: none; color: inherit; }
 .phones__icon { width: 90px; height: 90px; text-align: center; padding-top: 20px; float: left; margin-right: 40px; margin-bottom: 30px; position: relative; top: 20px; }
 .phones__icon:before { display: block; content: ""; position: absolute; left: 0; top: 0; width: 90px; height: 90px; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); border: 2px solid white; -webkit-transition: 1s; transition: 1s; }
 .phones__icon i { display: block; margin: 0 auto; background-image: url("../img/icons.png"); width: 59px; height: 45px; background-position: -211px 0px; }
-.phones__btn { display: inline-block; margin-left: 130px; margin-top: 60px; }
 .phones__clients { position: absolute; bottom: 0; left: 50%; margin-left: -600px; margin-bottom: -71px; width: 1200px; }
 
 .clients { padding: 20px 0; background: white; }
@@ -228,10 +227,14 @@ a { text-decoration: none; color: inherit; }
 .clients__next { left: auto; right: -20px; }
 .clients__next:before { background-image: url("../img/icons.png"); width: 12px; height: 22px; background-position: -274px -138px; left: auto; right: 22%; top: 31%; }
 
-.btn { padding: 20px 40px; background: #E83A93; text-align: center; font-size: 35px; color: white; display: inline-block; position: relative; -webkit-transition: 1s; transition: 1s; -webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); }
+.btn-wrap { -webkit-perspective: 2000px; perspective: 2000px; }
+
+.btn { width: 250px; height: 80px; line-height: 80px; background: #E83A93; text-align: center; font-size: 35px; color: white; display: inline-block; position: relative; -webkit-transform: rotateX(-90deg); transform: rotateX(-90deg); -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
 .btn:before { -webkit-transition: 1s; transition: 1s; content: ""; position: absolute; z-index: -1; top: 0; bottom: 0; left: 0; right: 0; background: white; -webkit-transform: scaleY(0); -ms-transform: scaleY(0); transform: scaleY(0); -webkit-transform-origin: 50%; -ms-transform-origin: 50%; transform-origin: 50%; -webkit-transition-property: -webkit-transform; transition-property: transform; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; -webkit-transition-timing-function: ease-out; transition-timing-function: ease-out; }
 .btn:hover { color: #E83A93; -webkit-box-shadow: 0 0 10px black; box-shadow: 0 0 10px black; }
 .btn:hover:before { -webkit-transform: scaleY(1); -ms-transform: scaleY(1); transform: scaleY(1); }
+.btn_b { position: absolute; top: 0; left: 0; -webkit-transform: rotateX(-90deg); transform: rotateX(-90deg); -webkit-transform-origin: center top; -ms-transform-origin: center top; transform-origin: center top; background: white; color: #E83A93; }
+.btn_b span { display: block; border: 1px solid #E83A93; width: 250px; height: 80px; line-height: 80px; -webkit-transform: rotateX(-180deg); transform: rotateX(-180deg); }
 
 .team { margin: 80px 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: stretch; -webkit-align-items: stretch; -ms-flex-align: stretch; align-items: stretch; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 .team__item { text-align: center; }
@@ -321,7 +324,6 @@ a { text-decoration: none; color: inherit; }
  .phones__img{ display: none; }
  .phones__text-wrap{ text-align: center; }
  .phones__icon{ display: inline-block; margin: 0 0 40px 0; float: none; }
- .phones__btn{ margin: 60px 0; }
  .phones__right{ text-align: center; }
  .phones__clients{ overflow: hidden; position: relative; left: 0; margin-left: 0; margin-bottom: 0; width: 100%; }
  .team{ -webkit-justify-content: space-around; -ms-flex-pack: distribute; justify-content: space-around; }
@@ -381,7 +383,6 @@ a { text-decoration: none; color: inherit; }
  .services{ margin-top: 50px; }
  .services__item{ width: 100%; }
  .phones__text-wrap h5{ font-size: 25px; }
- .phones__btn{ margin-top: 30px; }
  .btn{ padding: 15px 25px; font-size: 25px; }
  .team{ margin: 30px 0; }
  .team__item img{ max-width: 65%; margin: 0 auto 20px auto; }

@@ -690,14 +690,14 @@ a
 			display: block
 			margin: 0 auto
 			+s(code-white)
-	&__btn
-		display: inline-block
-		margin-left: 130px
-		margin-top: 60px
-		+r($desc)
-			margin: 60px 0
-		+r($mob)
-			margin-top: 30px
+	//&__btn
+	//	display: inline-block
+	//	margin-left: 130px
+	//	margin-top: 60px
+	//	+r($desc)
+	//		margin: 60px 0
+	//	+r($mob)
+	//		margin-top: 30px
 
 	&__right
 		+r($desc)
@@ -755,16 +755,24 @@ a
 			right: 22%
 			top: 31%
 
+.btn-wrap
+	perspective: 2000px
 .btn
-	padding: 20px 40px
+	//padding: 20px 40px
+	width: 250px
+	height: 80px
+	line-height: 80px
 	background: $primary
 	text-align: center
 	font-size: 35px
 	color: white
 	display: inline-block
 	position: relative
-	transition: 1s
-	transform: perspective(1px) translateZ(0)
+	//transition: 1s
+	//transform: perspective(1px) translateZ(0) rotateX(-90deg)
+	transform: rotateX(-90deg)
+	transform-style: preserve-3d
+	backface-visibility: hidden
 	+r($tab)
 		padding: 18px 35px
 		font-size: 30px
@@ -792,6 +800,23 @@ a
 		&:before
 			transform: scaleY(1)
 			//z-index: 0
+	&_b
+		position: absolute
+		top: 0
+		left: 0
+		transform: rotateX(-90deg)
+		transform-origin: center top
+		background: white
+		color: $primary
+		span
+			display: block
+			border: 1px solid $primary
+			width: 250px
+			height: 80px
+			line-height: 80px
+			transform: rotateX(-180deg)
+
+
 
 .team
 	margin: 80px 0

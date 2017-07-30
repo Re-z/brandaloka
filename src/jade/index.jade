@@ -44,7 +44,16 @@ block content
 					.about__left
 						p Suspendisse consequat nisl et consectetur hendrerit. Cras sitamet turpis ut purus #[span.colored pellentesque ullamcorper] sed ut nisl. Insed vulputate libero. Nullam nec auctor elit, vitae mattis.
 						p commodo. Suspendisse tincidunt orci ultrices, viverra mauris a, tristique mauris. #[span.colored Curabitur pretium] pellentesque risus, in adipiscing tortor consequat id.
-						a.btn.about__btn(href="#") Learn more
+
+						.btn-wrap
+							a(href="#").btn.about__btn(
+								data--5p-bottom="transform: rotateX(-90deg)"
+								data--40p-bottom="transform: rotateX(0deg	)"
+
+							) Learn more
+								.btn_b
+									span Learn more
+
 
 		section.block
 			.inner
@@ -68,17 +77,24 @@ block content
 			.inner
 				img.phones__img(src="img/devices.png")
 				.phones__right
-					mixin phonesItem(dataStart, dataEnd)
-						article.phones__item(data-0=dataStart, data-center-top=dataEnd)
+					mixin phonesItem
+						article.phones__item
 							.phones__icon: i
 							.phones__text-wrap
 								h5 Adipiscing tortor
 								p Morbi condimentum leo sed sollicitudin pulvinar. Phasellus rutrum interdum elit quis.
-					+phonesItem("transform: scale(0);", "transform: scale(1);")
-					+phonesItem("transform: scale(0);", "transform: scale(1);")
-					+phonesItem("transform: scale(0);", "transform: scale(1);")
+					+phonesItem
+					+phonesItem
+					+phonesItem
 
-					a.btn.phones__btn(href="#") Learn more
+					//a.btn.phones__btn(href="#") Learn more
+					.btn-wrap
+						a(href="#").btn.about__btn(
+							data--5-bottom="transform: rotateX(-90deg)"
+							data--40-bottom="transform: rotateX(0deg	)"
+						) Learn more
+							.btn_b
+								span Learn more
 
 			.clients.phones__clients
 				button.clients__next
@@ -129,7 +145,14 @@ block content
 					+postItem("img/post-2.jpg")
 					+postItem("img/post-3.jpg")
 
-				button.btn.more-posts More posts
+				//button.btn.more-posts More
+				.btn-wrap
+					a(href="#").btn.about__btn.more-posts(
+					data--5p-bottom="transform: rotateX(-90deg)"
+					data--40p-bottom="transform: rotateX(0deg	)"
+					) Learn more
+						.btn_b
+							span Learn more
 
 		section.block
 			.inner
@@ -196,7 +219,14 @@ block content
 				p Sed ut perspiciatis unde omnis iste natus error sit #[span.colored voluptatem accusantium.]
 				form
 					input(type="email" placeholder="enter your email address")
-					button.btn(type="submit" ) Subscribe now
+					.btn-wrap
+						a(href="#").btn.about__btn.more-posts(
+						data--5p-bottom="transform: rotateX(-90deg)"
+						data--40p-bottom="transform: rotateX(0deg	)"
+						) Subscribe now
+							.btn_b
+								span Subscribe now
+
 		section.block
 			.inner
 				h2	Get in #[span.colored touch]
@@ -213,7 +243,13 @@ block content
 								input(type="text" placeholder="Subject")
 						.feed__right
 							textarea
-					button(type="submit").btn Submit
+					.btn-wrap
+						button(type="submit").btn.about__btn.more-posts(
+						data--5p-bottom="transform: rotateX(-90deg)"
+						data--40p-bottom="transform: rotateX(0deg	)"
+						) Subscribe now
+							.btn_b
+								span Subscribe now
 
 
 	include _footer
