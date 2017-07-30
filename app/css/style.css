@@ -71,7 +71,6 @@ body { font-family: "Open Sans", sans-serif; font-size: 12px; }
 @font-face { font-family: HomizioNova; src: url("fonts/HomizioNova.eot"); src: url("fonts/HomizioNova.eot?#iefix") format("embedded-opentype"), url("fonts/HomizioNova.woff2") format("woff2"), url("fonts/HomizioNova.woff") format("woff"), url("fonts/HomizioNova.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: HomizioNova-Light; src: url("fonts/HomizioNova-Light.eot"); src: url("fonts/HomizioNova-Light.eot?#iefix") format("embedded-opentype"), url("fonts/HomizioNova-Light.woff2") format("woff2"), url("fonts/HomizioNova-Light.woff") format("woff"), url("fonts/HomizioNova-Light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 body { font-family: HomizioNova, sans-serif; min-width: 320px !important; }
-body.no-scroll { overflow: hidden; }
 
 a { text-decoration: none; color: inherit; }
 

@@ -1,9 +1,9 @@
 extends _layout
 
 block title
-	title
+	title Brandaloka
 block head
-	meta(name="keywords" content="Get an easy access to essay writing service cheap to order qualitative papers on Purplepandaessays.com. ")
+	meta(name="keywords" content="")
 	link(rel="canonical" href="")
 
 block content
@@ -33,7 +33,7 @@ block content
 				h2 About #[span.colored us]
 				p Sed ut perspiciatis unde omnis iste natus error sit #[span.colored voluptatem accusantium] doloremque totam rem aperiam, eaque ipsa #[span.colored quae ab illo] inventore veritatis et quasi architecto beat dicta sunt explicabo.
 				.about
-					.about__right(data-0="right: -800px; opacity: 0" data-center-top="right: 0; opacity: 1")
+					.about__right(data--0="right: -800px; opacity: 0" data--0-top="right: 0; opacity: 1")
 						button.about__next
 						button.about__prev
 						.about__slider.js-slider
@@ -45,14 +45,10 @@ block content
 						p Suspendisse consequat nisl et consectetur hendrerit. Cras sitamet turpis ut purus #[span.colored pellentesque ullamcorper] sed ut nisl. Insed vulputate libero. Nullam nec auctor elit, vitae mattis.
 						p commodo. Suspendisse tincidunt orci ultrices, viverra mauris a, tristique mauris. #[span.colored Curabitur pretium] pellentesque risus, in adipiscing tortor consequat id.
 
-						.btn-wrap
-							a(href="#").btn.about__btn(
-								data--5p-bottom="transform: rotateX(-90deg)"
-								data--40p-bottom="transform: rotateX(0deg	)"
-
-							) Learn more
-								.btn_b
-									span Learn more
+						//.btn-wrap
+						a(href="#").btn.about__btn(data--5p-bottom="transform: rotateX(-90deg)" data--40p-bottom="transform: rotateX(0deg)") Learn more
+							.btn_b
+								span Learn more
 
 
 		section.block
@@ -87,13 +83,9 @@ block content
 					+phonesItem
 					+phonesItem
 
-					//a.btn.phones__btn(href="#") Learn more
 					.btn-wrap
-						a(href="#").btn.about__btn(
-							data--5-bottom="transform: rotateX(-90deg)"
-							data--40-bottom="transform: rotateX(0deg	)"
-						) Learn more
-							.btn_b
+						a(href="#").btn.about__btn(data--5p-bottom="transform: rotateX(-90deg)" data--40p-bottom="transform: rotateX(0deg)") Learn more
+							span.btn_b
 								span Learn more
 
 			.clients.phones__clients
@@ -145,12 +137,8 @@ block content
 					+postItem("img/post-2.jpg")
 					+postItem("img/post-3.jpg")
 
-				//button.btn.more-posts More
 				.btn-wrap
-					a(href="#").btn.about__btn.more-posts(
-					data--5p-bottom="transform: rotateX(-90deg)"
-					data--40p-bottom="transform: rotateX(0deg	)"
-					) Learn more
+					a(href="#").btn.about__btn.more-posts(data--5p-bottom="transform: rotateX(-90deg)" data--40p-bottom="transform: rotateX(0deg)") Learn more
 						.btn_b
 							span Learn more
 
@@ -244,10 +232,7 @@ block content
 						.feed__right
 							textarea
 					.btn-wrap
-						button(type="submit").btn.about__btn.more-posts(
-						data--5p-bottom="transform: rotateX(-90deg)"
-						data--40p-bottom="transform: rotateX(0deg	)"
-						) Subscribe now
+						button(type="submit").btn.about__btn.more-posts(data--5p-bottom="transform: rotateX(-90deg)" data--40p-bottom="transform: rotateX(0deg)") Subscribe now
 							.btn_b
 								span Subscribe now
 
