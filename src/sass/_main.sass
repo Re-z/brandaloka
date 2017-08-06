@@ -77,13 +77,14 @@ a
 	&__content-wrap
 		position: relative
 	&__burger
-		position: absolute
+		position: fixed
 		top: 10px
 		left: 10px
 		display: none
 		width: 40px
 		height: 40px
 		padding: 10px 6px
+
 		+r(1000)
 			display: block
 		&:after
@@ -119,6 +120,7 @@ a
 
 .mob-menu
 	position: fixed
+	z-index: 100
 	top: -100%
 	left: 0
 	width: 100%
