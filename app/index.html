@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 700" rel="stylesheet">
   </head>
   <body>
-    <div id="skrollr-body" class="out">
+    <div class="out">
       <!--start header-->
       <header class="header">
         <div class="inner">
@@ -57,16 +57,16 @@
             <h1>What <span class="colored">we</span> do</h1>
             <p>Sed ut <span class="colored">perspiciatis unde omnis</span> iste natus error sit voluptatem accusantium doloremque totam rem aperiam, eaque ipsa quae ab illo inventore <span class="colored">veritatis</span> et quasi architecto beat dicta sunt explicabo. Nemo enim ipsam  <span class="colored">voluptatem</span> quia sit amet turpis ut purus  pellentesque ullamcorper sed ut nisl.</p>
             <div class="what">
-              <div data-0="transform:rotate(300deg) scale(0);" data-center-top="transform:rotate(0) scale(1);" class="what__item"><span>863</span>
+              <div class="what__item"><span>863</span>
                 <p>Projects work</p>
               </div>
-              <div data-0="transform:rotate(300deg) scale(0);" data-center-top="transform:rotate(0) scale(1);" class="what__item"><span>921</span>
+              <div class="what__item"><span>921</span>
                 <p>Facebook likes</p>
               </div>
-              <div data-0="transform:rotate(300deg) scale(0);" data-center-top="transform:rotate(0) scale(1);" class="what__item"><span>572</span>
+              <div class="what__item"><span>572</span>
                 <p>Tutorials create</p>
               </div>
-              <div data-0="transform:rotate(300deg) scale(0);" data-center-top="transform:rotate(0) scale(1);" class="what__item"><span>159</span>
+              <div class="what__item"><span>159</span>
                 <p>Cofees made</p>
               </div>
             </div>
@@ -77,16 +77,14 @@
             <h2>About <span class="colored">us</span></h2>
             <p>Sed ut perspiciatis unde omnis iste natus error sit <span class="colored">voluptatem accusantium</span> doloremque totam rem aperiam, eaque ipsa <span class="colored">quae ab illo</span> inventore veritatis et quasi architecto beat dicta sunt explicabo.</p>
             <div class="about">
-              <div data--0="right: -800px; opacity: 0" data-center-top="right: 0; opacity: 1" class="about__right">
+              <div class="about__right">
                 <button class="about__next"></button>
                 <button class="about__prev"></button>
                 <div class="about__slider js-slider"><img src="img/slider.jpg"><img src="img/slider.jpg"><img src="img/slider.jpg"><img src="img/slider.jpg"></div>
               </div>
               <div class="about__left">
                 <p>Suspendisse consequat nisl et consectetur hendrerit. Cras sitamet turpis ut purus <span class="colored">pellentesque ullamcorper</span> sed ut nisl. Insed vulputate libero. Nullam nec auctor elit, vitae mattis.</p>
-                <p>commodo. Suspendisse tincidunt orci ultrices, viverra mauris a, tristique mauris. <span class="colored">Curabitur pretium</span> pellentesque risus, in adipiscing tortor consequat id.</p>
-                <!--.btn-wrap--><a href="#" data--5p-bottom="transform: rotateX(-90deg)" data--40p-bottom="transform: rotateX(0deg)" class="btn about__btn">Learn more
-                  <div class="btn_b"><span>Learn more</span></div></a>
+                <p>commodo. Suspendisse tincidunt orci ultrices, viverra mauris a, tristique mauris. <span class="colored">Curabitur pretium</span> pellentesque risus, in adipiscing tortor consequat id.</p><a href="#" class="btn about__btn">Learn more</a>
               </div>
             </div>
           </div>
@@ -164,8 +162,7 @@
                                 <h5>Adipiscing tortor</h5>
                                 <p>Morbi condimentum leo sed sollicitudin pulvinar. Phasellus rutrum interdum elit quis.</p>
                               </div>
-                            </article>
-              <div class="btn-wrap"><a href="#" data--5p-bottom="transform: rotateX(-90deg)" data--40p-bottom="transform: rotateX(0deg)" class="btn about__btn">Learn more<span class="btn_b"><span>Learn more</span></span></a></div>
+                            </article><a href="#" class="btn about__btn">Learn more</a>
             </div>
           </div>
           <div class="clients phones__clients">
@@ -219,9 +216,7 @@
                                 </footer>
                               </div>
                             </article>
-            </div>
-            <div class="btn-wrap"><a href="#" data--5p-bottom="transform: rotateX(-90deg)" data--40p-bottom="transform: rotateX(0deg)" class="btn about__btn more-posts">Learn more
-                <div class="btn_b"><span>Learn more</span></div></a></div>
+            </div><a href="#" class="btn more-posts">Learn more</a>
           </div>
         </section>
         <section class="block">
@@ -304,9 +299,7 @@
             <h2>Subscribe <span class="colored">our</span> newsletter</h2>
             <p>Sed ut perspiciatis unde omnis iste natus error sit <span class="colored">voluptatem accusantium.</span></p>
             <form>
-              <input type="email" placeholder="enter your email address">
-              <div class="btn-wrap"><a href="#" data--5p-bottom="transform: rotateX(-90deg)" data--40p-bottom="transform: rotateX(0deg	)" class="btn about__btn more-posts">Subscribe now
-                  <div class="btn_b"><span>Subscribe now</span></div></a></div>
+              <input type="email" placeholder="enter your email address"><a href="#" class="btn about__btn more-posts">Subscribe now</a>
             </form>
           </div>
         </section>
@@ -331,11 +324,7 @@
                   <textarea></textarea>
                 </div>
               </div>
-              <div class="btn-wrap">
-                <button type="submit" data--5p-bottom="transform: rotateX(-90deg)" data--40p-bottom="transform: rotateX(0deg)" class="btn about__btn more-posts">Subscribe now
-                  <div class="btn_b"><span>Subscribe now</span></div>
-                </button>
-              </div>
+              <button type="submit" class="btn more-posts">Subscribe now</button>
             </form>
           </div>
         </section>
@@ -355,6 +344,5 @@
     </div>
     <!--script(async src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js")-->
     <script src="js/app.js"></script>
-    <script>var s = skrollr.init()</script>
   </body>
 </html>

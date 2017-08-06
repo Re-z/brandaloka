@@ -16,16 +16,16 @@ block content
 				h1 What #[span.colored we] do
 				p Sed ut #[span.colored perspiciatis unde omnis] iste natus error sit voluptatem accusantium doloremque totam rem aperiam, eaque ipsa quae ab illo inventore #[span.colored veritatis] et quasi architecto beat dicta sunt explicabo. Nemo enim ipsam  #[span.colored voluptatem] quia sit amet turpis ut purus  pellentesque ullamcorper sed ut nisl.
 				.what
-					.what__item(data-0="transform:rotate(300deg) scale(0);" data-center-top="transform:rotate(0) scale(1);")
+					.what__item
 						span 863
 						p Projects work
-					.what__item(data-0="transform:rotate(300deg) scale(0);" data-center-top="transform:rotate(0) scale(1);")
+					.what__item
 						span 921
 						p Facebook likes
-					.what__item(data-0="transform:rotate(300deg) scale(0);" data-center-top="transform:rotate(0) scale(1);")
+					.what__item
 						span 572
 						p Tutorials create
-					.what__item(data-0="transform:rotate(300deg) scale(0);" data-center-top="transform:rotate(0) scale(1);")
+					.what__item
 						span 159
 						p Cofees made
 		section.block.block_colored
@@ -33,7 +33,7 @@ block content
 				h2 About #[span.colored us]
 				p Sed ut perspiciatis unde omnis iste natus error sit #[span.colored voluptatem accusantium] doloremque totam rem aperiam, eaque ipsa #[span.colored quae ab illo] inventore veritatis et quasi architecto beat dicta sunt explicabo.
 				.about
-					.about__right(data--0="right: -800px; opacity: 0" data-center-top="right: 0; opacity: 1")
+					.about__right
 						button.about__next
 						button.about__prev
 						.about__slider.js-slider
@@ -45,10 +45,9 @@ block content
 						p Suspendisse consequat nisl et consectetur hendrerit. Cras sitamet turpis ut purus #[span.colored pellentesque ullamcorper] sed ut nisl. Insed vulputate libero. Nullam nec auctor elit, vitae mattis.
 						p commodo. Suspendisse tincidunt orci ultrices, viverra mauris a, tristique mauris. #[span.colored Curabitur pretium] pellentesque risus, in adipiscing tortor consequat id.
 
-						//.btn-wrap
-						a(href="#").btn.about__btn(data--5p-bottom="transform: rotateX(-90deg)" data--40p-bottom="transform: rotateX(0deg)") Learn more
-							.btn_b
-								span Learn more
+						a(href="#").btn.about__btn Learn more
+
+
 
 
 		section.block
@@ -83,10 +82,7 @@ block content
 					+phonesItem
 					+phonesItem
 
-					.btn-wrap
-						a(href="#").btn.about__btn(data--5p-bottom="transform: rotateX(-90deg)" data--40p-bottom="transform: rotateX(0deg)") Learn more
-							span.btn_b
-								span Learn more
+					a(href="#").btn.about__btn Learn more
 
 			.clients.phones__clients
 				button.clients__next
@@ -137,10 +133,9 @@ block content
 					+postItem("img/post-2.jpg")
 					+postItem("img/post-3.jpg")
 
-				.btn-wrap
-					a(href="#").btn.about__btn.more-posts(data--5p-bottom="transform: rotateX(-90deg)" data--40p-bottom="transform: rotateX(0deg)") Learn more
-						.btn_b
-							span Learn more
+
+				a(href="#").btn.more-posts Learn more
+
 
 		section.block
 			.inner
@@ -207,13 +202,7 @@ block content
 				p Sed ut perspiciatis unde omnis iste natus error sit #[span.colored voluptatem accusantium.]
 				form
 					input(type="email" placeholder="enter your email address")
-					.btn-wrap
-						a(href="#").btn.about__btn.more-posts(
-						data--5p-bottom="transform: rotateX(-90deg)"
-						data--40p-bottom="transform: rotateX(0deg	)"
-						) Subscribe now
-							.btn_b
-								span Subscribe now
+					a(href="#").btn.about__btn.more-posts Subscribe now
 
 		section.block
 			.inner
@@ -231,10 +220,10 @@ block content
 								input(type="text" placeholder="Subject")
 						.feed__right
 							textarea
-					.btn-wrap
-						button(type="submit").btn.about__btn.more-posts(data--5p-bottom="transform: rotateX(-90deg)" data--40p-bottom="transform: rotateX(0deg)") Subscribe now
-							.btn_b
-								span Subscribe now
+
+
+					button(type="submit").btn.more-posts Subscribe now
+
 
 
 	include _footer
